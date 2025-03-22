@@ -1,0 +1,433 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(213, 164, 25, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+.hero-title {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+.hero-text {
+  font-size: 1.2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.shop-button {
+  background-color: #088178 !important;
+  padding: 0.8rem 2rem !important;
+  font-size: 1.1rem !important;
+}
+
+.shop-button:hover {
+  background-color: #066e67 !important;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.product-card:hover .product-actions {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.product-image {
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.product-actions {
+  transform: translateX(-50%) translateY(20px);
+  will-change: transform, opacity;
+}
+
+.offer-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.offer-card:hover .offer-image {
+  transform: scale(1.08);
+}
+
+.banner-section {
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.banner-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.banner-title {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+}
+
+.banner-subtitle {
+  font-size: 2rem !important;
+  color: #ff4081 !important;
+}
+
+/* Category Card Styles */
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.MuiListItem-root:hover .category-image {
+  transform: scale(1.1);
+}
+
+.MuiListItem-root:hover .category-overlay {
+  opacity: 0.7;
+}
+
+.category-title {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: relative;
+}
+
+/* Featured Product Styles */
+.product-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  z-index: 1;
+}
+
+/* Responsive Typography */
+@media (max-width: 960px) {
+  .hero-title {
+    font-size: 3rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem !important;
+  }
+
+  .category-image {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .category-image {
+    height: 250px !important;
+  }
+
+  .product-tag {
+    padding: 2px 8px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    opacity: 0.4;
+    background: linear-gradient(
+      45deg,
+      rgba(26, 26, 26, 0.3),
+      rgba(213, 164, 25, 0.3)
+    );
+  }
+  50% {
+    opacity: 0.6;
+    background: linear-gradient(
+      45deg,
+      rgba(213, 164, 25, 0.3),
+      rgba(26, 26, 26, 0.3)
+    );
+  }
+  100% {
+    opacity: 0.4;
+    background: linear-gradient(
+      45deg,
+      rgba(26, 26, 26, 0.3),
+      rgba(213, 164, 25, 0.3)
+    );
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5a419;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b88a14;
+}
+
+/* Hover Effects */
+.MuiCard-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-4px);
+}
+
+/* Newsletter Input Focus */
+input[type="email"]:focus {
+  border-color: #d5a419 !important;
+}
+
+/* Smooth Transitions */
+.product-card,
+.offer-image,
+.product-actions,
+.product-image {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer Links Animation */
+.footer-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #d5a419;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-form input {
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form button {
+  transition: background-color 0.3s ease;
+}
+
+/* Loading Animation */
+.loading-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: #f6f7f8;
+}
+
+.loading-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* Mobile Menu Animation */
+.MuiCollapse-root {
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.MuiListItem-root.category-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.category-item-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  z-index: 1;
+}
+
+/* Responsive Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 133.33%; /* 4:3 Aspect Ratio */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
