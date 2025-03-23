@@ -30,6 +30,15 @@ Weavers Update:
 ![Screenshot 2025-03-22 203236](https://github.com/user-attachments/assets/ad8258e1-9584-4efb-9fa7-be23edc56ecd)
 ![Screenshot 2025-03-22 203247](https://github.com/user-attachments/assets/63426ad1-265a-4a4e-8c65-20e5b45c4d19)
 
+WeaverNest Admin:
+
+![Screenshot 2025-03-23 135911](https://github.com/user-attachments/assets/7963d9ae-02e8-443b-b5fa-37adc1f6222a)
+![Screenshot 2025-03-23 135926](https://github.com/user-attachments/assets/c4ed6be5-f6f8-479a-a0a1-753b9ddc64f7)
+![Screenshot 2025-03-23 135957](https://github.com/user-attachments/assets/f51ed18b-ba48-4538-8d3d-116f11037147)
+![Screenshot 2025-03-23 140031](https://github.com/user-attachments/assets/a9801fcc-e8b4-4fee-90bb-edf57497f58a)
+
+
+
 
 
 
